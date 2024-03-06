@@ -166,20 +166,3 @@ try {
 
 
 
-// 1. Define a function tallyLicensesRecursively(directoryPath) that accepts a directory path as a parameter:
-//     a. Initialize an empty object to store separate counters for each license type (e.g., MIT, ISC, etc.).
-//     b. Read the contents of the directory asynchronously at directoryPath.
-//     c. Loop through each item in the directory:
-//         ci. Construct the full path of the item by joining directoryPath with the item's name.
-//         cii. Check if the item is a directory:
-//             - If it is a directory, recursively call tallyLicensesRecursively with the subdirectory path.
-//             - Merge the returned counters with the main counters object.
-//             - Continue to the next item.
-//         ciii. If it is a file:
-//             - Read the package.json file of the item.
-//             - Extract the license type from the package.json.
-//             - Update the respective counter for the extracted license type.
-//     d. Return the counters object.
-
-// 2. Call tallyLicensesRecursively with the 'node_modules' directory path.
-// 3. Write the counters object to a 'licenses.json' file.
